@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Switchboard Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            boxShadow: {
+              'glow-red': '0 0 20px rgba(239, 68, 68, 0.7)',
+              'glow-blue': '0 0 20px rgba(59, 130, 246, 0.7)',
+            },
+            keyframes: {
+              pulse: {
+                '0%, 100%': { opacity: 0.7 },
+                '50%': { opacity: 1 },
+              },
+              'slide-in': {
+                'from': { transform: 'translateX(100%)', opacity: '0' },
+                'to': { transform: 'translateX(0)', opacity: '1' },
+              },
+              'slide-out': {
+                'from': { transform: 'translateX(0)', opacity: '1' },
+                'to': { transform: 'translateX(100%)', opacity: '0' },
+              }
+            },
+            animation: {
+              pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'slide-in': 'slide-in 0.3s ease-out forwards',
+              'slide-out': 'slide-out 0.3s ease-in forwards',
+            },
+          },
+        },
+      };
+    </script>
+    <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.545.0",
+    "firebase/app": "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js",
+    "firebase/database": "https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js",
+    "firebase/auth": "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js",
+    "firebase/": "https://aistudiocdn.com/firebase@^12.3.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-900 text-white">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

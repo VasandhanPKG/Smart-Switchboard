@@ -1,0 +1,7 @@
+{
+  "name": "Smart Switchboard Dashboard",
+  "description": "A responsive web dashboard to monitor and control smart home devices in real-time using Firebase. It displays sensor readings and allows toggling LEDs and relays.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
